@@ -33,5 +33,6 @@ public:
 
 sf::Color setSaturation(const sf::Color& color, int value);
 sf::Color setBrightness(const sf::Color& color, int value);
+sf::Color getGrayEquivalent(const sf::Color& color);
 
 const sf::Color& getColor(const std::string& colorName);

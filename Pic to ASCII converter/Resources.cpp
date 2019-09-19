@@ -29,17 +29,19 @@ void Resources::initConstantsInfo()
 	constantsType[toCStr(CHARACTERS_SIZE)] = "int";
 	constantsType[toCStr(ASCII_FIRST)] = "int";
 	constantsType[toCStr(ASCII_LAST)] = "int";
+	constantsType[toCStr(USE_BOLD)] = "bool";
 	constantsType[toCStr(OUTPUT_RESOLUTION_WIDTH)] = "int";
 	constantsType[toCStr(OUTPUT_RESOLUTION_HEIGHT)] = "int";
+	constantsType[toCStr(COLUMNS_INDENT)] = "int";
+	constantsType[toCStr(LINES_INDENT)] = "int";
 	constantsType[toCStr(COMPRESS_TEXT_MATRIX)] = "bool";
-	constantsType[toCStr(DISPERSION)] = "int";
 	constantsType[toCStr(ADAPTIVE_BRIGHTNESS)] = "bool";
 	constantsType[toCStr(BRIGHTNESS_FACTOR)] = "float";
-	constantsType[toCStr(BACKGROUND_COLOR)] = "sf::Color";
-	constantsType[toCStr(IS_COLORED)] = "bool";
-	constantsType[toCStr(TEXT_COLOR)] = "sf::Color";
-	constantsType[toCStr(MULTICOLOR_CHARACTERS)] = "bool";
+	constantsType[toCStr(DISPERSION)] = "int";
 	constantsType[toCStr(INDEPENDENT_CHARACTERS_COLOR)] = "bool";
+	constantsType[toCStr(IS_COLORED)] = "bool";
+	constantsType[toCStr(MULTICOLOR_CHARACTERS)] = "bool";
+	constantsType[toCStr(TEXT_COLOR)] = "sf::Color";
 	constantsType[toCStr(FRAMES_COUNT)] = "int";
 	constantsType[toCStr(INPUT_FOLDER)] = "std::string";
 	constantsType[toCStr(INPUT_FILENAME_EXTENSION)] = "std::string";
@@ -52,17 +54,19 @@ void Resources::initConstantsInfo()
 	constantsId[toCStr(CHARACTERS_SIZE)] = id++;
 	constantsId[toCStr(ASCII_FIRST)] = id++;
 	constantsId[toCStr(ASCII_LAST)] = id++;
+	constantsId[toCStr(USE_BOLD)] = id++;
 	constantsId[toCStr(OUTPUT_RESOLUTION_WIDTH)] = id++;
 	constantsId[toCStr(OUTPUT_RESOLUTION_HEIGHT)] = id++;
+	constantsId[toCStr(COLUMNS_INDENT)] = id++;
+	constantsId[toCStr(LINES_INDENT)] = id++;
 	constantsId[toCStr(COMPRESS_TEXT_MATRIX)] = id++;
-	constantsId[toCStr(DISPERSION)] = id++;
 	constantsId[toCStr(ADAPTIVE_BRIGHTNESS)] = id++;
 	constantsId[toCStr(BRIGHTNESS_FACTOR)] = id++;
-	constantsId[toCStr(BACKGROUND_COLOR)] = id++;
-	constantsId[toCStr(IS_COLORED)] = id++;
-	constantsId[toCStr(TEXT_COLOR)] = id++;
-	constantsId[toCStr(MULTICOLOR_CHARACTERS)] = id++;
+	constantsId[toCStr(DISPERSION)] = id++;
 	constantsId[toCStr(INDEPENDENT_CHARACTERS_COLOR)] = id++;
+	constantsId[toCStr(IS_COLORED)] = id++;
+	constantsId[toCStr(MULTICOLOR_CHARACTERS)] = id++;
+	constantsId[toCStr(TEXT_COLOR)] = id++;
 	constantsId[toCStr(FRAMES_COUNT)] = id++;
 	constantsId[toCStr(INPUT_FOLDER)] = id++;
 	constantsId[toCStr(INPUT_FILENAME_EXTENSION)] = id++;
@@ -127,17 +131,19 @@ Resources::Resources() :
 	CHARACTERS_SIZE(*static_cast<int*>(constants[constantsId[toCStr(CHARACTERS_SIZE)]])),
 	ASCII_FIRST(*static_cast<int*>(constants[constantsId[toCStr(ASCII_FIRST)]])),
 	ASCII_LAST(*static_cast<int*>(constants[constantsId[toCStr(ASCII_LAST)]])),
+	USE_BOLD(*static_cast<bool*>(constants[constantsId[toCStr(USE_BOLD)]])),
 	OUTPUT_RESOLUTION_WIDTH(*static_cast<int*>(constants[constantsId[toCStr(OUTPUT_RESOLUTION_WIDTH)]])),
 	OUTPUT_RESOLUTION_HEIGHT(*static_cast<int*>(constants[constantsId[toCStr(OUTPUT_RESOLUTION_HEIGHT)]])),
+	COLUMNS_INDENT(*static_cast<int*>(constants[constantsId[toCStr(COLUMNS_INDENT)]])),
+	LINES_INDENT(*static_cast<int*>(constants[constantsId[toCStr(LINES_INDENT)]])),
 	COMPRESS_TEXT_MATRIX(*static_cast<bool*>(constants[constantsId[toCStr(COMPRESS_TEXT_MATRIX)]])),
-	DISPERSION(*static_cast<int*>(constants[constantsId[toCStr(DISPERSION)]])),
 	ADAPTIVE_BRIGHTNESS(*static_cast<bool*>(constants[constantsId[toCStr(ADAPTIVE_BRIGHTNESS)]])),
 	BRIGHTNESS_FACTOR(*static_cast<float*>(constants[constantsId[toCStr(BRIGHTNESS_FACTOR)]])),
-	BACKGROUND_COLOR(*static_cast<sf::Color*>(constants[constantsId[toCStr(BACKGROUND_COLOR)]])),
-	IS_COLORED(*static_cast<bool*>(constants[constantsId[toCStr(IS_COLORED)]])),
-	TEXT_COLOR(*static_cast<sf::Color*>(constants[constantsId[toCStr(TEXT_COLOR)]])),
-	MULTICOLOR_CHARACTERS(*static_cast<bool*>(constants[constantsId[toCStr(MULTICOLOR_CHARACTERS)]])),
+	DISPERSION(*static_cast<int*>(constants[constantsId[toCStr(DISPERSION)]])),
 	INDEPENDENT_CHARACTERS_COLOR(*static_cast<bool*>(constants[constantsId[toCStr(INDEPENDENT_CHARACTERS_COLOR)]])),
+	IS_COLORED(*static_cast<bool*>(constants[constantsId[toCStr(IS_COLORED)]])),
+	MULTICOLOR_CHARACTERS(*static_cast<bool*>(constants[constantsId[toCStr(MULTICOLOR_CHARACTERS)]])),
+	TEXT_COLOR(*static_cast<sf::Color*>(constants[constantsId[toCStr(TEXT_COLOR)]])),
 	FRAMES_COUNT(*static_cast<int*>(constants[constantsId[toCStr(FRAMES_COUNT)]])),
 	INPUT_FOLDER(*static_cast<std::string*>(constants[constantsId[toCStr(INPUT_FOLDER)]])),
 	INPUT_FILENAME_EXTENSION(*static_cast<std::string*>(constants[constantsId[toCStr(INPUT_FILENAME_EXTENSION)]])),

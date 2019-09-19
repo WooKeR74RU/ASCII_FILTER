@@ -81,6 +81,11 @@ sf::Color setBrightness(const sf::Color& color, int value)
 	hsv.v = value;
 	return hsv.getColor();
 }
+sf::Color getGrayEquivalent(const sf::Color& color)
+{
+	int gray = 0.2126f * color.r + 0.7152f * color.g + 0.0722f * color.b;
+	return sf::Color(gray, gray, gray);
+}
 
 const sf::Color& getColor(const std::string& colorName)
 {
@@ -102,6 +107,7 @@ const sf::Color& getColor(const std::string& colorName)
 		colors["Red"] = sf::Color::Red;
 		colors["Silver"] = sf::Color(192, 192, 192);
 		colors["Teal"] = sf::Color(000, 128, 128);
+		colors["Transparent"] = sf::Color::Transparent;
 		colors["White"] = sf::Color::White;
 		colors["Yellow"] = sf::Color::Yellow;
 		once = true;

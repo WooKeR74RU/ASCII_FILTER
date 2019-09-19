@@ -1,7 +1,7 @@
 #pragma once
 
 /*
-Resources / constants singleton class
+	Resources / constants singleton class
 */
 
 #include <string>
@@ -26,17 +26,19 @@ public:
 	const int CHARACTERS_SIZE;
 	const int ASCII_FIRST;
 	const int ASCII_LAST;
+	const bool USE_BOLD;
 	const int OUTPUT_RESOLUTION_WIDTH;
 	const int OUTPUT_RESOLUTION_HEIGHT;
+	const int COLUMNS_INDENT;
+	const int LINES_INDENT;
 	const bool COMPRESS_TEXT_MATRIX;
-	const int DISPERSION;
 	const bool ADAPTIVE_BRIGHTNESS;
 	const float BRIGHTNESS_FACTOR;
-	const sf::Color BACKGROUND_COLOR;
-	const bool IS_COLORED;
-	const sf::Color TEXT_COLOR;
-	const bool MULTICOLOR_CHARACTERS;
+	const int DISPERSION;
 	const bool INDEPENDENT_CHARACTERS_COLOR;
+	const bool IS_COLORED;
+	const bool MULTICOLOR_CHARACTERS;
+	const sf::Color TEXT_COLOR;
 	const int FRAMES_COUNT;
 	const std::string INPUT_FOLDER;
 	const std::string INPUT_FILENAME_EXTENSION;
@@ -45,6 +47,7 @@ public:
 	const int THREADS_COUNT;
 
 	int charCount;
+	sf::Image symbolsImage;
 	std::map<std::thread::id, sf::RenderWindow> windows;
 
 	Resources(const Resources&) = delete;
