@@ -7,11 +7,12 @@
 #include <string>
 #include <vector>
 #include <map>
+#include <set>
 #include <thread>
 #include <SFML/Graphics/RenderWindow.hpp>
 #include <SFML/Graphics/Font.hpp>
 
-#include "Glyph.h"
+#include "Symbol.h"
 
 class Resources
 {
@@ -21,33 +22,30 @@ private:
 	static void loadConstants();
 	static void clearTempData();
 public:
-	const sf::Font FONT; //CONFIG
-	const int CHAR_SIZE; //CONFIG
-	const int SYMBOL_WIDTH;
-	const int SYMBOL_HEIGHT;
-	const int ASCII_FIRST; //CONFIG
-	const int ASCII_LAST; //CONFIG
-	const int CHAR_COUNT;
-	const float BRIGHTNESS_FACTOR; //CONFIG
-	const int ADAPTIVE_BRIGHTNESS; //CONFIG
-	const int DISPERSION; //CONFIG
-	const int OUTPUT_RESOLUTION_WIDTH; //CONFIG
-	const int OUTPUT_RESOLUTION_HEIGHT; //CONFIG
-	const int MATRIX_WIDTH;
-	const int MATRIX_HEIGHT;
-	const sf::Color BACKGROUND_COLOR; //CONFIG
-	const bool STABLE_TEXT_COLOR; //CONFIG
-	const bool IS_COLORED; //CONFIG
-	const sf::Color TEXT_COLOR; //CONFIG
-	const int FRAMES_COUNT; //CONFIG
-	const std::string FRAMES_FOLDER; //CONFIG
-	const std::string FRAMES_FILENAME_EXTENSION; //CONFIG
-	const std::string OUTPUT_FOLDER; //CONFIG
-	const std::string OUTPUT_FILENAME_EXTENSION; //CONFIG
-	const int THREADS_COUNT; //CONFIG
+	const sf::Font FONT;
+	const int CHARACTERS_SIZE;
+	const int ASCII_FIRST;
+	const int ASCII_LAST;
+	const int OUTPUT_RESOLUTION_WIDTH;
+	const int OUTPUT_RESOLUTION_HEIGHT;
+	const bool COMPRESS_TEXT_MATRIX;
+	const int DISPERSION;
+	const bool ADAPTIVE_BRIGHTNESS;
+	const float BRIGHTNESS_FACTOR;
+	const sf::Color BACKGROUND_COLOR;
+	const bool IS_COLORED;
+	const sf::Color TEXT_COLOR;
+	const bool MULTICOLOR_CHARACTERS;
+	const bool INDEPENDENT_CHARACTERS_COLOR;
+	const int FRAMES_COUNT;
+	const std::string INPUT_FOLDER;
+	const std::string INPUT_FILENAME_EXTENSION;
+	const std::string OUTPUT_FOLDER;
+	const std::string OUTPUT_FILENAME_EXTENSION;
+	const int THREADS_COUNT;
 
+	int charCount;
 	std::map<std::thread::id, sf::RenderWindow> windows;
-	std::map<std::thread::id, std::vector<std::vector<Glyph>>> matrices;
 
 	Resources(const Resources&) = delete;
 	Resources& operator=(const Resources&) = delete;

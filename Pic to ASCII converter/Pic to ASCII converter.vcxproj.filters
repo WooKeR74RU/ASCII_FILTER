@@ -27,7 +27,7 @@
     <ClCompile Include="Utilities.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="Glyph.cpp">
+    <ClCompile Include="Symbol.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
   </ItemGroup>
@@ -41,7 +41,7 @@
     <ClInclude Include="Utilities.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="Glyph.h">
+    <ClInclude Include="Symbol.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>

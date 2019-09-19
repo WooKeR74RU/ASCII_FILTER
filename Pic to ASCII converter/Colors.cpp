@@ -88,6 +88,9 @@ const sf::Color& getColor(const std::string& colorName)
 	static bool once = false;
 	if (!once)
 	{
+		colors["Transparent"] = sf::Color::Transparent;
+
+		colors["Alpha"] = sf::Color(0, 0, 0, 0);
 		colors["Aqua"] = sf::Color(000, 255, 255);
 		colors["Black"] = sf::Color::Black;
 		colors["Blue"] = sf::Color::Blue;
@@ -104,6 +107,7 @@ const sf::Color& getColor(const std::string& colorName)
 		colors["Teal"] = sf::Color(000, 128, 128);
 		colors["White"] = sf::Color::White;
 		colors["Yellow"] = sf::Color::Yellow;
+
 		once = true;
 	}
 	return colors[colorName];

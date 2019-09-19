@@ -140,13 +140,13 @@
     <ClCompile Include="Colors.cpp" />
     <ClCompile Include="EntryPoint.cpp" />
     <ClCompile Include="Resources.cpp" />
-    <ClCompile Include="Glyph.cpp" />
+    <ClCompile Include="Symbol.cpp" />
     <ClCompile Include="Utilities.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Colors.h" />
     <ClInclude Include="Resources.h" />
-    <ClInclude Include="Glyph.h" />
+    <ClInclude Include="Symbol.h" />
     <ClInclude Include="Utilities.h" />
   </ItemGroup>
   <ItemGroup>
