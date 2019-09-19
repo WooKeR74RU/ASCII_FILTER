@@ -69,7 +69,7 @@ void Resources::initConstantsInfo()
 	constantsId[toCStr(OUTPUT_FOLDER)] = id++;
 	constantsId[toCStr(OUTPUT_FILENAME_EXTENSION)] = id++;
 	constantsId[toCStr(THREADS_COUNT)] = id++;
-	
+
 	constants.resize(id);
 }
 void Resources::loadConstants()

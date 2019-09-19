@@ -1,7 +1,7 @@
 #pragma once
 
 /*
-	Resources / constants singleton class
+Resources / constants singleton class
 */
 
 #include <string>

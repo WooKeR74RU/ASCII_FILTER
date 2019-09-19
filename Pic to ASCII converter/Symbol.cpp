@@ -6,14 +6,6 @@ Symbol::Symbol(int index, sf::Color color)
 {
 	set(index, color);
 }
-bool Symbol::operator<(const Symbol& other) const
-{
-	return index_ < other.index_;
-}
-int Symbol::getIndex() const
-{
-	return index_;
-}
 int Symbol::getCharCode() const
 {
 	return charCode_;
@@ -45,11 +37,6 @@ void Symbol::set(int index, sf::Color color)
 void Symbol::setPosition(float x, float y)
 {
 	text_.setPosition(x, y - text_.getLocalBounds().top / 2);
-}
-void Symbol::setColor(sf::Color color)
-{
-	color_ = color;
-	text_.setFillColor(color_);
 }
 void Symbol::draw() const
 {
